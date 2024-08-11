@@ -37,7 +37,7 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
     apk update && apk add --no-cache \
     libuv \
     libressl \
-    hwloc@community
+    hwloc
 
 WORKDIR /xmr
 COPY --from=builder /miner/xmrig/build/xmrig /xmr
