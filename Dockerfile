@@ -23,11 +23,9 @@ RUN git clone https://github.com/xmrig/xmrig && \
     mkdir xmrig/build && \
     cd xmrig && git checkout ${XMRIG_VERSION}
 
-# Copy the patch file into the container
-COPY .build/supportxmr.patch /miner/xmrig
-
-# Apply the patch to the XMRig source code
-RUN cd xmrig && git apply supportxmr.patch
+# Optional: Apply the patch if needed
+# COPY .build/supportxmr.patch /miner/xmrig
+# RUN cd xmrig && git apply supportxmr.patch
 
 # Build XMRig from source
 RUN cd xmrig/build && \
