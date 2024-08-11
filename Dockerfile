@@ -11,7 +11,7 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
     libuv-dev \
     linux-headers \
     libressl-dev \
-    hwloc-dev@community
+    hwloc
 
 RUN git clone https://github.com/xmrig/xmrig && \
     mkdir xmrig/build && \
